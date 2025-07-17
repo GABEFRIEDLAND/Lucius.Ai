@@ -12,7 +12,7 @@ app.get('/auth/google', (req, res) => {
     client_id: process.env.CLIENT_ID,
     redirect_uri: process.env.REDIRECT_URI,
     response_type: 'code',
-    scope: 'https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile',
+    scope: 'https://www.googleapis.com/auth/gmail.readonly https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid',
     access_type: 'offline',
     prompt: 'consent'
   });
